@@ -17,7 +17,7 @@ class PostsController < ApplicationController
   def show
     @book = Book.find(params[:id])
     if @book.save
-      flash[:notice] = "test"
+      flash[:notice] = "Book was successfully created."
     else
       @books = Book.all
       render :index
